@@ -5,6 +5,9 @@
 " Source: https://github.com/morhetz/gruvbox
 " Last Modified: 04 Sep 2015
 " -----------------------------------------------------------------------------
+" Changed: Mephis Pheies
+" Email: mephistommm@gmai.com
+" -----------------------------------------------------------------------------
 
 " Supporting code -------------------------------------------------------------
 " Initialisation: {{{
@@ -86,10 +89,10 @@ let s:is_dark=(&background == 'dark')
 let s:gb = {}
 
 " fill it with absolute colors
-let s:gb.dark0_hard  = ['#1d2021', 234]     " 29-32-33
+let s:gb.dark0_hard  = ['#1d2021', 233]     " 29-32-33   --------------- change 234 to 233
 let s:gb.dark0       = ['#282828', 235]     " 40-40-40
 let s:gb.dark0_soft  = ['#32302f', 236]     " 50-48-47
-let s:gb.dark1       = ['#3c3836', 237]     " 60-56-54
+let s:gb.dark1       = ['#3c3836', 235]     " 60-56-54   ---------------- change 237 to 235
 let s:gb.dark2       = ['#504945', 239]     " 80-73-69
 let s:gb.dark3       = ['#665c54', 241]     " 102-92-84
 let s:gb.dark4       = ['#7c6f64', 243]     " 124-111-100
@@ -101,7 +104,7 @@ let s:gb.gray_244    = ['#928374', 244]     " 146-131-116
 let s:gb.light0_hard = ['#f9f5d7', 230]     " 249-245-215
 let s:gb.light0      = ['#fdf4c1', 229]     " 253-244-193
 let s:gb.light0_soft = ['#f2e5bc', 228]     " 242-229-188
-let s:gb.light1      = ['#ebdbb2', 223]     " 235-219-178
+let s:gb.light1      = ['#ebdbb2', 221]     " 235-219-178       ------------------- change 223 to 221
 let s:gb.light2      = ['#d5c4a1', 250]     " 213-196-161
 let s:gb.light3      = ['#bdae93', 248]     " 189-174-147
 let s:gb.light4      = ['#a89984', 246]     " 168-153-132
@@ -296,7 +299,7 @@ if exists('g:gruvbox_color_column')
   let s:color_column = get(s:gb, g:gruvbox_color_column)
 endif
 
-let s:vert_split = s:bg2
+let s:vert_split = s:bg0                                    " ------------------- change s:bg2 to sbg0
 if exists('g:gruvbox_vert_split')
   let s:vert_split = get(s:gb, g:gruvbox_vert_split)
 endif
@@ -488,22 +491,22 @@ call s:HL('VertSplit', s:fg4, s:vert_split)
 " Current match in wildmenu completion
 call s:HL('WildMenu', s:blue, s:bg2, s:bold)
 
-" Directory names, special names in listing
-hi! link Directory GruvboxGreenBold
+" Directory names, special names in listing                              " ----------------change green to blue
+hi! link Directory GruvboxBlueBold
 
-" Titles for output from :set all, :autocmd, etc.
-hi! link Title GruvboxGreenBold
+" Titles for output from :set all, :autocmd, etc.                        " ----------------change green to blue
+hi! link Title GruvboxBlueBold
 
 " Error messages on the command line
 call s:HL('ErrorMsg',   s:vim_bg, s:red, s:bold)
-" More prompt: -- More --
-hi! link MoreMsg GruvboxYellowBold
-" Current mode message: -- INSERT --
-hi! link ModeMsg GruvboxYellowBold
+" More prompt: -- More --                                         " ----------------change blue to green
+hi! link MoreMsg GruvboxGreenBold                               
+" Current mode message: -- INSERT --                              " ----------------change blue to green
+hi! link ModeMsg GruvboxGreenBold
 " 'Press enter' prompt and yes/no questions
-hi! link Question GruvboxOrangeBold
+hi! link Question GruvboxGreenBold
 " Warning messages
-hi! link WarningMsg GruvboxRedBold
+hi! link WarningMsg GruvboxBold
 
 " }}}
 " Gutter: {{{
@@ -576,7 +579,7 @@ hi! link Macro GruvboxAqua
 hi! link PreCondit GruvboxAqua
 
 " Generic constant
-hi! link Constant GruvboxPurple
+hi! link Constant GruvboxOrange
 " Character constant: 'c', '/n'
 hi! link Character GruvboxPurple
 " String constant: "this is a string"
