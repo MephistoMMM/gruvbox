@@ -507,6 +507,9 @@ hi! link ModeMsg GruvboxGreenBold
 hi! link Question GruvboxGreenBold
 " Warning messages
 hi! link WarningMsg GruvboxBold
+" Modified:                                                       "-------------------add vimCommand for airline modified 
+hi! link vimCommand GruvboxRed
+
 
 " }}}
 " Gutter: {{{
@@ -578,7 +581,7 @@ hi! link Macro GruvboxAqua
 " Preprocessor #if, #else, #endif, etc.
 hi! link PreCondit GruvboxAqua
 
-" Generic constant
+" Generic constant                                                    " ----------------change purple to orange
 hi! link Constant GruvboxOrange
 " Character constant: 'c', '/n'
 hi! link Character GruvboxPurple
