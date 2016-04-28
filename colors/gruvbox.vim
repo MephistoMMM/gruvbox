@@ -104,7 +104,7 @@ let s:gb.gray_244    = ['#928374', 244]     " 146-131-116
 let s:gb.light0_hard = ['#f9f5d7', 230]     " 249-245-215
 let s:gb.light0      = ['#fdf4c1', 229]     " 253-244-193
 let s:gb.light0_soft = ['#f2e5bc', 228]     " 242-229-188
-let s:gb.light1      = ['#ebdbb2', 221]     " 235-219-178       ------------------- change 223 to 221
+let s:gb.light1      = ['#ebdbb2', 223]     " 235-219-178       ------------------- change 223 to 221
 let s:gb.light2      = ['#d5c4a1', 250]     " 213-196-161
 let s:gb.light3      = ['#bdae93', 248]     " 189-174-147
 let s:gb.light4      = ['#a89984', 246]     " 168-153-132
@@ -1204,6 +1204,10 @@ hi! link jsonKeyword GruvboxGreen
 hi! link jsonQuote GruvboxGreen
 hi! link jsonBraces GruvboxFg1
 hi! link jsonString GruvboxFg1
+
+" }}}
+"
+" MyselfHighlight: {{{
 
 " }}}
 
